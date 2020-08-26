@@ -35,3 +35,5 @@ hist.day1 +
 stat_function(fun = dnorm, args = list(mean = mean(df$day1, na.rm = TRUE),
 sd = sd(df$day1, na.rm = TRUE)),
 colour = "black", size = 1)
+
+# page 171
