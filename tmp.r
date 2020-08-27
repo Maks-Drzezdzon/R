@@ -9,6 +9,8 @@ library(ggplot2)
 library(pastecs)
 library(psych)
 library(Rcmdr)
+library(tidyverse)
+
 
 # setwd('/Users/maksdrzezdzon/Documents/Github/R/data')
 setwd('C:/Users/Grim/Documents/GitHub/R/data')
@@ -37,3 +39,9 @@ sd = sd(df$day1, na.rm = TRUE)),
 colour = "black", size = 1)
 
 # page 171
+?mpg # help
+d <- ggplot2::mpg #load dataset
+ggplot(data = d)
+# aes == Aesthetic Mappings
+ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy)) 
+
