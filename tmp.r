@@ -5,10 +5,10 @@ print(b)
 frame <- data.frame(a,b)
 print(frame)
 library(car)
-library(ggplot2)
 library(pastecs)
 library(psych)
 library(Rcmdr)
+# tidyverse has most needed libs
 library(tidyverse)
 
 
