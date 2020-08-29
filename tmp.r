@@ -40,8 +40,10 @@ colour = "black", size = 1)
 
 # page 171
 ?mpg # help
-d <- ggplot2::mpg #load dataset
-ggplot(data = d)
+plotdata <- ggplot2::mpg #load dataset
+ggplot(data = plotdata)
 # aes == Aesthetic Mappings
 ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy)) 
+
+describe(df$day1)
 
