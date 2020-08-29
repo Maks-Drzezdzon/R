@@ -47,3 +47,5 @@ ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy))
 
 describe(df$day1)
 
+stat.desc(df$day1, basic = FALSE, norm = TRUE)
+
