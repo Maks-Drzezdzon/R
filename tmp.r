@@ -38,7 +38,6 @@ stat_function(fun = dnorm, args = list(mean = mean(df$day1, na.rm = TRUE),
 sd = sd(df$day1, na.rm = TRUE)),
 colour = "black", size = 1)
 
-# page 171
 ?mpg # help
 plotdata <- ggplot2::mpg #load dataset
 ggplot(data = plotdata)
@@ -49,3 +48,5 @@ describe(df$day1)
 
 stat.desc(df$day1, basic = FALSE, norm = TRUE)
 
+
+# page 205 -- cont with R course
