@@ -48,5 +48,18 @@ describe(df$day1)
 
 stat.desc(df$day1, basic = FALSE, norm = TRUE)
 
+# using color mapping for each class present 
+ggplot(data = mpg) +  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+
+question <- 
+  "What's gone wrong with this code? Why are the points not blue? 
+  ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy, color = 'blue' ))"
+
+# debugging exercise 
+ggplot(data = mpg) +  geom_point(mapping = aes(x = displ, y = hwy), color = 'blue')
+
+unique(ggplot2::mpg$model)
+
+ggplot(data = mpg) +  geom_point(mapping = aes(x = displ, y = hwy)) +  facet_wrap(~ class, nrow = 2)
 
 # page 205 -- cont with R course
