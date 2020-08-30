@@ -58,8 +58,20 @@ question <-
 # debugging exercise 
 ggplot(data = mpg) +  geom_point(mapping = aes(x = displ, y = hwy), color = 'blue')
 
-unique(ggplot2::mpg$model)
-
+unique(ggplot2::mpg$displ)
+# pass in formula to facet_warp()
+# each reading and class gets its own graph plot
 ggplot(data = mpg) +  geom_point(mapping = aes(x = displ, y = hwy)) +  facet_wrap(~ class, nrow = 2)
+
+
+ggplot(data = mpg) +  geom_point(mapping = aes(x = drv, y = cyl))
+
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)
+
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(. ~ cyl)
 
 # page 205 -- cont with R course
