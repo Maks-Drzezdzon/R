@@ -12,8 +12,8 @@ library(Rcmdr)
 library(tidyverse)
 
 
-# setwd('/Users/maksdrzezdzon/Documents/Github/R/data')
-setwd('C:/Users/Grim/Documents/GitHub/R/data')
+setwd('/Users/maksdrzezdzon/Documents/Github/R')
+# setwd('C:/Users/Grim/Documents/GitHub/R/data')
 
 df <- read.delim("Chapter 5/DownloadFestival(No Outlier).dat", header=TRUE)
 print(df)
