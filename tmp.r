@@ -23,3 +23,10 @@ setwd('C:/Users/Grim/Documents/GitHub/R/data')
 # to use base funcs, you need to call them as shown below
 stats::filter()
 stats::lag()
+
+# saves graph in pdf format and data in csv
+ggplot(diamonds, aes(carat, price)) +
+  geom_hex()
+ggsave("diamonds.pdf")
+
+write_csv(diamonds, "diamonds.csv")
