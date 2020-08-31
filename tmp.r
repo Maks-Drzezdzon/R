@@ -10,38 +10,28 @@ library(psych)
 library(Rcmdr)
 # tidyverse has most needed libs
 library(tidyverse)
+library(nycflights13)
 
-
+<<<<<<< HEAD
 setwd('/Users/maksdrzezdzon/Documents/Github/R')
 # setwd('C:/Users/Grim/Documents/GitHub/R/data')
+=======
+# setwd('/Users/maksdrzezdzon/Documents/Github/R/data')
+setwd('C:/Users/Grim/Documents/GitHub/R/data')
+# df <- read.delim("Chapter 5/DownloadFestival(No Outlier).dat", header=TRUE)
+# print(df)
+# page 205 -- cont with R course
+# alt + shift + K
+>>>>>>> b572bb4ff4ea5f12ee62f4358a3bf2585e87eef6
 
-df <- read.delim("Chapter 5/DownloadFestival(No Outlier).dat", header=TRUE)
-print(df)
+# dplyr overwrites some functions in R
+# to use base funcs, you need to call them as shown below
+stats::filter()
+stats::lag()
 
-# plot
-hist.day1 <- ggplot(df, aes(day1)) + 
-  # remove legend
-  theme(legend.position = "none") +
-  # use density plot, color black and fill white
-  geom_histogram(aes(y = ..density..), colour = "black", fill = "white") +
-  # name x/y labels
-  labs(x = "Hygiene score on day 1", y = "Density")
-# render
-hist.day1
+# saves graph in pdf format and data in csv
+ggplot(diamonds, aes(carat, price)) +
+  geom_hex()
+ggsave("diamonds.pdf")
 
-# add curve
-hist.day1 +
-# The stat_function() command draws the normal curve using the function dnorm(). This
-# function basically returns the probability (i.e., the density) for a given value from a normal
-# distribution of known mean and standard deviation
-stat_function(fun = dnorm, args = list(mean = mean(df$day1, na.rm = TRUE),
-sd = sd(df$day1, na.rm = TRUE)),
-colour = "black", size = 1)
-
-# page 171
-?mpg # help
-d <- ggplot2::mpg #load dataset
-ggplot(data = d)
-# aes == Aesthetic Mappings
-ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy)) 
-
+write_csv(diamonds, "diamonds.csv")
