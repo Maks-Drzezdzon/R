@@ -11,5 +11,5 @@ setwd('/Users/maksdrzezdzon/Documents/Github/R')
 # Collapse many values down to a single summary summarize()
 
 flights <- nycflights13::flights
-flights
+describe(flights)
 filter(flights )
