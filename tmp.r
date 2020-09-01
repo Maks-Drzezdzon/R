@@ -12,7 +12,7 @@ library(Rcmdr)
 library(tidyverse)
 library(nycflights13)
 
-setwd('/Users/maksdrzezdzon/Documents/Github/R')
+# setwd('/Users/maksdrzezdzon/Documents/Github/R')
 # setwd('C:/Users/Grim/Documents/GitHub/R/data')
 
 # page 205 -- cont with R course
@@ -29,3 +29,9 @@ ggplot(diamonds, aes(carat, price)) +
 ggsave("diamonds.pdf")
 
 write_csv(diamonds, "diamonds.csv")
+
+# https://learning.oreilly.com/library/view/r-for-data/9781491910382/ch03.html
+# do chapter 3 ex
+df <- nycflights13::flights
+?df
+filter(flights, month == 1, day == 1)
