@@ -40,4 +40,5 @@ two_hour_delay <- filter(nov_dec, dep_delay > 2)
 # Arrived more than two hours late, but didn’t leave late
 arrived_late <- filter(nov_dec, dep_time <= sched_dep_time, arr_delay >= 120)
 
-two_hour_delay
+# Departed between midnight and 6 a.m. (inclusive)
+mid_six_am <- filter(nov_dec, between(nov_dec, dep_time = 0, arr_time = 600))
