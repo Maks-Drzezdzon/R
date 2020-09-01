@@ -37,4 +37,7 @@ df <- nycflights13::flights
 # filter(flights, month == 1, day == 1)
 nov_dec <- filter(flights, month %in% c(11, 12))
 two_hour_delay <- filter(nov_dec, dep_delay > 2)
+# Arrived more than two hours late, but didn’t leave late
+arrived_late <- filter(nov_dec, dep_time <= sched_dep_time, arr_delay >= 120)
 
+two_hour_delay
