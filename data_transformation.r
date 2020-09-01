@@ -11,5 +11,8 @@ setwd('/Users/maksdrzezdzon/Documents/Github/R')
 # Collapse many values down to a single summary summarize()
 
 flights <- nycflights13::flights
-describe(flights)
+colnames(flights)
+filter(flights, month == 11 | month == 12)
+nov_dec <- filter(flights, month %in% c(11, 12))
+nov_dec
 filter(flights )

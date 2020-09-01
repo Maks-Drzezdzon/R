@@ -34,4 +34,7 @@ write_csv(diamonds, "diamonds.csv")
 # do chapter 3 ex
 df <- nycflights13::flights
 ?df
-filter(flights, month == 1, day == 1)
+# filter(flights, month == 1, day == 1)
+nov_dec <- filter(flights, month %in% c(11, 12))
+two_hour_delay <- filter(nov_dec, dep_delay > 2)
+
