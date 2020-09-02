@@ -42,3 +42,5 @@ arrived_late <- filter(nov_dec, dep_time <= sched_dep_time, arr_delay >= 120)
 
 # Departed between midnight and 6 a.m. (inclusive)
 mid_six_am <- filter(nov_dec, between(nov_dec, dep_time = 0, arr_time = 600))
+
+arrange(df, desc(day,year))
